@@ -1,7 +1,7 @@
 /*---------------WATER EFFECT---------------*/
 
 $('.container, .container2').ripples({
-  resolution: 500,
+  resolution: 1000,
   dropRadius: 20,
   perturbance: 0.007,
 });
