@@ -2,7 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
     font-family: var(--font1);
+    color: var(--primary-bg-color-white);
 }
 
 .main {
@@ -58,6 +62,20 @@
     background: url('../images/thumb.webp') no-repeat center center/cover;
 }
 
+.main-certif {
+    background: url('../images/thumb.webp') no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+.p-certif {
+    font-size: max(1vw, 12px);
+    background-color: rgba(0, 0, 0, 0.514);
+    color: white;
+    padding: max(0.5vw, 3px);
+    margin-top: max(1vw, 10px);
+    border-radius: 5px;
+}
+
 .section-video {
     height: 100vh;
 }
@@ -88,17 +106,19 @@
 
 .overlay-title {
     position: relative;
-    width: max(100vw, 320px);
-    min-height: max(100vh, 450px);
+    width: 100%;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.65);
     padding: 0.5vw;
     box-shadow: 0px 0px 60px 5px black;
 }
 
-h1, h4, h3, h2 {
+h1,
+h4,
+h3,
+h2 {
     font-family: var(--font1);
     font-weight: 100;
-    color: var(--primary-bg-color-white);
     text-align: center;
     -webkit-user-select: none;
     -webkit-touch-callout: none;
@@ -108,60 +128,53 @@ h1, h4, h3, h2 {
 }
 
 h1 {
-    font-size: max(5.4vw, 46px);
+    position: absolute;
+    top: 25%;
+    font-size: max(5vw, 40px);
     letter-spacing: 0.8vw;
     color: var(--quinternary-bg-color);
-    padding: 0.5vw;
-    top: 25%;
-    right: 0%;
-    position: absolute;
     animation: moveH1 1.5s;
     animation-fill-mode: forwards;
 }
 
 @keyframes moveH1 {
     from {
-        left: -200%;
+        transform: translateX(-200%);
         opacity: 0;
     }
 
     to {
-        left: 0%;
         opacity: 1;
     }
 }
 
 h2 {
-    padding: 0.5vw;
-    font-size: max(2vw, 14px);
-    color: var(--primary-bg-color-white);
-    top: 40%;
-    right: 0%;
     position: absolute;
+    top: 40%;
+    font-size: max(1.6vw, 12px);
+    color: var(--primary-bg-color-white);
     animation: moveH2 2s;
     animation-fill-mode: forwards;
 }
 
 @keyframes moveH2 {
     from {
-        right: -200%;
+        transform: translateX(200%);
         opacity: 0;
     }
 
     to {
-        left: 0%;
         opacity: 1;
     }
 }
 
 .p-css {
-    font-size: max(1.2vw, 11px);
-    top: 50%;
-    right: 0%;
     position: absolute;
+    font-size: max(1.1vw, 10px);
+    top: 50%;
     animation: movePcss 2s;
     animation-fill-mode: forwards;
-    line-height: 30px;
+    line-height: calc(20px + 1vw);
     text-align: left;
 }
 
@@ -181,126 +194,86 @@ h2 {
 
 @keyframes movePcss {
     from {
-        left: -200%;
+        transform: translateX(-200%);
         opacity: 0;
     }
 
     to {
-        left: 50%;
+        transform: translateX(40%);
         opacity: 1;
     }
 }
-
-/*_______________X_______________FIN SECTION ACCUEIL_______________X_______________*/
 
 
 /*______________________________SECTION À PROPOS______________________________*/
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.6);
-    width: max(80vw, 300px);
-    padding: 3vw 0;
     box-shadow: 0px 0px 10px 5px black, inset 5px 0px 30px 7px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: max(5vw, 30px);
-}
-
-h3 {
-    font-family: var(--font2);
-    font-size: max(1.7vw, 20px);
-    letter-spacing: 0.2vw;
-    color: var(--primary-bg-color-white);
-    margin-top: max(1vw, 5px);
+    gap: max(2vw, 20px);
+    width: calc(310px + 60vw);
 }
 
 .p-titre {
-    width: max(30vw, 300px);
     font-family: var(--font1);
     font-size: max(1vw, 11px);
     letter-spacing: 0.2vw;
     line-height: max(1.4vw, 14px);
 }
 
+.p-titre,
 .container-skills {
-    width: max(30vw, 300px);
-}
-
-.block-skillsBar {
-    width: 100%;
-    justify-content: space-between;
-    border: 2px solid rgb(255, 255, 255);
-    margin: 12px 0;
-    border-radius: 50px;
-}
-
-.skills-bar {
-    width: 90%;
-    background-color: var(--primary-bg-color-black);
-    border-radius: 0px 50px 50px 0px;
-}
-
-.skills {
-    text-align: right;
-    font-size: max(0.9vw, 9px);
-    width: 100%;
-    padding: 1px;
-    color: rgb(255, 255, 255);
-    border-radius: 0px 50px 50px 0px;
+    width: 50%;
 }
 
 .p-skills {
-    font-size: max(1vw, 9px);
-    font-family: var(--font1);
-    width: max(8vw, 70px);
+    width: 100%;
+    font-size: max(1vw, 10px);
+    background-color: rgba(0, 0, 0, 0.648);
     color: var(--primary-bg-color-white);
-    background-color: #000000;
-    border-radius: 50px 0px 0px 50px;
-    border-right: 2px solid var(--primary-bg-color-white);
+    border: 1px solid var(--quinternary-bg-color);
+    text-align: center;
+    border-radius: 10px;
 }
 
-.html {
-    width: 90%;
-    background-color: rgb(255, 0, 0);
+.logo {
+    min-height: 100%;
 }
 
-.css {
-    width: 80%;
-    background-color: rgb(0, 135, 225);
+.logo-group-1 {
+    width: calc(10px + 1.5vw);
 }
 
-.js {
-    width: 15%;
-    background-color: rgb(255, 217, 0);
+.logo-group-2-resp {
+    width: calc(29px + 3vw);
 }
 
-.responsive {
-    width: 95%;
-    background-color: rgb(109, 0, 163);
+.logo-group-2,
+.logo-group-4,
+.logo-group-5 {
+    width: calc(14px + 1.7vw);
 }
 
-.php {
-    width: 30%;
-    background-color: rgb(72, 72, 136);
+.logo-group-3 {
+    width: calc(25px + 1.5vw);
 }
 
-.mySql {
-    width: 30%;
-    background-color: rgb(237, 135, 1);
+.logo-group-5b {
+    width: calc(18px + 1.9vw);
 }
 
-.wordpress {
-    width: 50%;
-    background-color: rgb(0, 217, 255);
+.logo-group-5c {
+    width: calc(37px + 2.5vw);
 }
 
-.bootstrap {
-    width: 20%;
-    background-color: rgba(181, 53, 197, 0.7);
+.figcaption {
+    text-align: center;
+    font-size: calc(6px + 0.3vw);
 }
 
-/*_______________X_______________FIN SECTION À PROPOS_______________X_______________*/
+.fig-adobe {
+    margin-top: calc(1px + 0.7vw);
+}
 
 
 /*______________________________SECTION PROJETS______________________________*/
@@ -309,8 +282,7 @@ h3 {
 #projets {
     flex-wrap: wrap;
     flex-shrink: 0;
-    padding: max(5vw, 30px);
-    gap: 10vw;
+    gap: calc(60px + 0.5vw);
 }
 
 .scene {
@@ -432,7 +404,7 @@ h3 {
 
 .labelCube {
     font-family: var(--font5);
-    font-size: max(1.4vw, 16px);
+    font-size: calc(16px + 0.5vw);
     text-shadow: -0.5px -0.5px 0px black;
     transition: 0.5s;
 }
@@ -442,13 +414,8 @@ h3 {
 }
 
 .radio-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    padding: 5vw 4vw 5vw 4vw;
     box-shadow: 1px 1px 20px 8px black, inset 20px 0px 20px 15px rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     letter-spacing: 0.1vw;
@@ -475,8 +442,8 @@ h3 {
     top: 0;
     width: 100%;
     height: 100vh;
-    overflow: auto;
     /* active le scroll si besoin */
+    overflow: auto;
     z-index: 1;
     scroll-snap-type: none;
 }
@@ -529,7 +496,8 @@ h3 {
     transition: 0.3s;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: var(--primary-bg-color-white);
     text-decoration: none;
     cursor: pointer;
@@ -537,17 +505,26 @@ h3 {
 
 /*Projets*/
 
-.img-face1, .img-face3 {
+.img-face1,
+.img-face3 {
     width: max(20vw, 150px);
     box-shadow: 0 0 5px 1px white;
 }
 
-.img-face2, .img-face4, .img-face5, .img-face6 {
+.img-face2,
+.img-face4,
+.img-face5,
+.img-face6 {
     width: max(20vw, 150px);
     box-shadow: 0 0 5px 1px rgb(0, 0, 0);
 }
 
-.p-face1, .p-face2, .p-face3, .p-face4, .p-face5, .p-face6 {
+.p-face1,
+.p-face2,
+.p-face3,
+.p-face4,
+.p-face5,
+.p-face6 {
     font-family: var(--font1);
     font-size: max(0.8vw, 9px);
     margin-top: 1vw;
@@ -585,7 +562,8 @@ h3 {
 }
 
 
-.img-overlay, .img-overlay1 {
+.img-overlay,
+.img-overlay1 {
     width: max(50vw, 290px);
     margin-bottom: max(1vw, 20px);
 }
@@ -646,7 +624,8 @@ h3 {
 }
 
 
-.link-return, .blockLink-video {
+.link-return,
+.blockLink-video {
     background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid var(--quinternary-bg-color);
     padding-top: max(0.3vw, 2px);
@@ -654,11 +633,12 @@ h3 {
     padding-left: max(0.6vw, 4px);
     padding-right: max(0.6vw, 4px);
     border-radius: 10px;
-    margin-bottom: max(1vw, 50px);
+    margin-bottom: max(1vw, 20px);
     transition: 0.5s
 }
 
-.link-return:hover, .blockLink-video:hover {
+.link-return:hover,
+.blockLink-video:hover {
     border: 2px solid var(--primary-bg-color-white);
 }
 
@@ -700,46 +680,33 @@ h3 {
     border-radius: 20px;
 }
 
-/*Fin projets*/
-
-
-
-/* XXXXXXXXXXXXXXXXXXXX FIN CONTENU CUBE XXXXXXXXXXXXXXXXXXXX */
-
-/*_______________X_______________FIN SECTION PROJETS_______________X_______________*/
-
-
-
-
 
 /*______________________________SECTION CONTACT______________________________*/
 
 .formContact {
-    width: max(30vw, 300px);
-    min-height: 80vh;
     border: 6px double var(--quinternary-bg-color);
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding: 1vw;
     box-shadow: inset 0px 0px 30px 2px var(--quinternary-bg-color), 10px 10px 20px 0px var(--primary-bg-color-black);
 }
 
 .h3-contact {
     font-family: var(--font3);
-    font-size: max(3vw, 35px);
+    font-size: calc(20px + 1.5vw);
     color: var(--primary-bg-color-white);
     text-shadow: 2px 2px 10px var(--quinternary-bg-color);
     letter-spacing: 1px;
 }
 
-.block-email, .block-message {
+.block-email,
+.block-message {
     text-align: left;
-    margin-top: max(1vw, 20px);
     color: var(--quinternary-bg-color);
 }
 
-.email, .message {
-    font-size: max(1.1vw, 15px);
+.email,
+.message {
+    font-size: max(1vw, 12px);
     margin: 8px 0px 5px;
     letter-spacing: 1px;
     color: var(--primary-bg-color-white);
@@ -748,7 +715,6 @@ h3 {
 .mailText {
     font-size: max(1vw, 10px);
     border-radius: 10px;
-    padding: 11px;
     border: 2px solid var(--quinternary-bg-color);
     background-color: black;
     color: var(--primary-bg-color-white);
@@ -759,18 +725,19 @@ h3 {
     outline: 2px solid white;
 }
 
-.textarea, .input-mail {
+.textarea,
+.input-mail {
     width: max(25vw, 250px);
     font-size: max(1vw, 12px);
     box-shadow: inset 0px 0px 3px 1px var(--quinternary-bg-color);
 }
 
+.textarea {
+    height: calc(60px + 10vh);
+}
+
 #envoyer {
     font-size: max(1.1vw, 12px);
-    width: max(8vw, 100px);
-    padding: 5px;
-    margin-top: max(5vw, 30px);
-    margin-bottom: max(1vw, 20px);
     border: 3px solid var(--quinternary-bg-color);
     background-color: var(--primary-bg-color-black);
     color: var(--primary-bg-color-white);
@@ -787,8 +754,8 @@ h3 {
 
 .block-social {
     position: absolute;
-    top: 30px;
-    right: 10px;
+    bottom: 20px;
+    right: 5px;
     gap: max(1vw, 10px);
 }
 
@@ -804,10 +771,10 @@ h3 {
     font-size: max(1vw, 9px);
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 4px;
 }
 
-.red, .green {
+.red,
+.green {
     font-size: max(0.9vw, 11px);
     padding: 3px 15px;
     border-radius: 10px;
@@ -822,13 +789,6 @@ h3 {
     background-color: rgb(69, 160, 69);
 }
 
-/*_______________X_______________FIN SECTION CONTACT_______________X_______________*/
-
-
-
-
-
-
 
 
 /*______________________________MEDIAQUERIES______________________________*/
@@ -836,28 +796,21 @@ h3 {
 @media only screen and (max-width: 700px) {
     .overlay {
         flex-direction: column;
-        width: 85%;
-        padding: 5px 0;
     }
 
-    .p-titre, .container-skills {
-        width: 90%;
+    .p-titre,
+    .container-skills {
+        width: 100%;
     }
 
-    .block-skillsBar {
-        margin: 8px 0;
-    }
-
-    .radio-group {
-        padding: 30px 50px 30px 50px;
-    }
-
-    .link-return, .blockLink-video {
+    .link-return,
+    .blockLink-video {
         border: 1px solid var(--quinternary-bg-color);
         border-radius: 5px;
     }
 
-    .link-return:hover, .blockLink-video:hover {
+    .link-return:hover,
+    .blockLink-video:hover {
         border: 1px solid var(--primary-bg-color-white);
         border-radius: 5px;
     }
@@ -866,25 +819,6 @@ h3 {
 @media only screen and (max-width: 630px) {
     .video {
         margin-left: 0px;
-    }
-}
-
-
-@media only screen and (max-width: 400px) {
-    .p-css {
-        font-size: max(1.2vw, 11px);
-    }
-
-    @keyframes movePcss {
-        from {
-            left: -200%;
-            opacity: 0;
-        }
-
-        to {
-            left: 30%;
-            opacity: 1;
-        }
     }
 }
 
@@ -901,7 +835,7 @@ h3 {
     /* Accueil */
     .p-css {
         top: 47%;
-        line-height: 20px;
+        line-height: calc(15px + 0.5vw);
     }
 
     /* A propos */
@@ -912,23 +846,6 @@ h3 {
         align-items: center;
         justify-content: space-evenly;
         gap: 10px;
-        margin-top: 10px;
-        margin-bottom: 5px;
-    }
-
-    .img-overlay1 {
-        margin-top: 20px;
-        margin-bottom: 5px;
-    }
-
-    .img-overlay2 {
-        width: max(30vw, 230px);
-        margin-top: 10px;
-        margin-bottom: 5px;
-    }
-
-    .block-skillsBar {
-        margin: 5px 0;
     }
 
     /* Projets */
@@ -937,34 +854,24 @@ h3 {
         flex-shrink: 0;
     }
 
-    .radio-group {
-        padding: 5vw 3vw 5vw 3vw;
-    }
-
     /* Contact */
     #contact {
         padding: 1vw;
     }
 
-    .formContact {
-        width: max(72vw, 420px);
-        min-height: 90vh;
-        padding: 0;
-        margin: 0;
-    }
-
     .h3-contact {
         font-size: max(3vw, 22px);
-        margin-top: 2vw;
         margin-bottom: 0vw;
     }
 
-    .email, .message {
+    .email,
+    .message {
         font-size: max(1.1vw, 11px);
         margin: 0px 0px 5px;
     }
 
-    .textarea, .input-mail {
+    .textarea,
+    .input-mail {
         width: max(25vw, 200px);
         font-size: max(1vw, 11px);
     }

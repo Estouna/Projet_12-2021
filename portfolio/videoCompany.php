@@ -1,5 +1,5 @@
 <?php
-include "../portfolio/includes/head.php";
+require_once "../portfolio/includes/head.php";
 $title = "Company";
 ?>
 
